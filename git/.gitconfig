@@ -1,0 +1,43 @@
+[user]
+	name = Danny Garcia-Huang
+	email = buzzedword@users.noreply.github.com
+
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
+
+[push]
+	autoSetupRemote = true
+
+[rerere]
+	enabled = true
+
+[column]
+	ui = auto
+
+[color]
+	ui = true
+
+[alias]
+	st = status -sb
+	ci = commit -v
+	br = branch -vv
+	co = switch
+	rs = restore
+	df = diff
+	wc = log --raw
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	cl = log --stat --no-merges --pretty=format:'%ai: %an | %s'
